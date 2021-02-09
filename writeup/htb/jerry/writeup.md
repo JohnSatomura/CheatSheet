@@ -1,4 +1,3 @@
-Unfinished
 # How to solove ?
 
 ## add Lame to /etc/hosts
